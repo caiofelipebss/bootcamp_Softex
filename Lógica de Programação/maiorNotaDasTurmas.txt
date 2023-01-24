@@ -1,0 +1,158 @@
+OBS: Pessoal, não passei para o VisualG, tá? Fiz no papel, acho que é mais ou menos assim. Como estou um pouco atrasado com o curso, não tive tempo para passar direitinho. Daí a sintaxe não está exatamente igual ao VisualG. Caso tenham alguma correção ou dica, podem falar. 
+
+Após uma prova de vestibular, uma escola quer identificar quantos dos seus alunos foram aprovados em cada turma de formandos. Ela quer saber qual aluno teve a maior nota e de qual turma ele é. 
+Nessa escola, há quatro turmas (A, B, C e D) com vinte e cinco alunos cada.
+
+Elabore um algoritmo que solicite o nome e a nota do vestibular aos alunos. Depois, informe quantos deles foram aprovados, de que turma são, qual a maior nota em cada turma e qual aluno teve a maior nota de todas.
+
+Para que o aluno seja aprovado no vestibular, ele deverá obter nota maior ou igual a 7.
+
+ATENÇÃO: As notas por turma não podem se repetir.
+
+
+algoritmo "maiorNotaDasTurmas"
+var
+
+	nomeAluno, valorDigitado: caractere;
+	nota: real;
+	turma: caractere;
+	contAluno: inteiro;
+	contNota: real;
+	guardaNotaA, guardaNotaB, guardaNotaC, guardaNotaD: real;
+	maiorNota: real;
+
+
+inicio
+	
+	contAluno = 0;
+	contNota = 0;
+	guardaNota = 0;
+	maiorNota = 0;
+
+	escreva("Deseja cadastrar o desempenho de um novo aluno? [S/N]");
+	leia(valorDigitado);
+
+	
+REPITA
+
+	escreva ("Entre com a turma do aluno: ");
+	leia(turma);
+
+ESCOLHA (turma)
+	{
+
+	caso 'A': 
+		
+	escreva ("Entre com o nome do aluno: ");
+	leia(nomeAluno);
+
+	escreva ("Entre com a nota do aluno: ");
+	leia(nota);
+
+	se (nota >= 7) 
+	então { 
+		contAluno = contAluno+1; 
+		}
+	
+	se (nota > maiorNota) 
+	então {
+		 maiorNota = nota;
+		}
+	
+	guardaNotaA = maiorNota;
+
+fimSe
+fimSe
+	
+
+	caso 'B': 
+		
+	escreva ("Entre com o nome do aluno: ");
+	leia(nomeAluno);
+
+	escreva ("Entre com a nota do aluno: ");
+	leia(nota);
+
+	se (nota >= 7) 
+	então { 
+		contAluno = contAluno+1; 
+		}
+	
+	se (nota > maiorNota) 
+	então {
+		 maiorNota = nota;
+		}
+	
+	guardaNotaB = maiorNota;
+
+fimSe
+fimSe
+
+	caso 'C': 
+		
+	escreva ("Entre com o nome do aluno: ");
+	leia(nomeAluno);
+
+	escreva ("Entre com a nota do aluno: ");
+	leia(nota);
+
+	se (nota >= 7) 
+	então { 
+		contAluno = contAluno+1; 
+		}
+	
+	se (nota > maiorNota) 
+	então {
+		 maiorNota = nota;
+		}
+	
+	guardaNotaC = maiorNota;
+
+fimSe
+fimSe
+
+	caso 'D': 
+		
+	escreva ("Entre com o nome do aluno: ");
+	leia(nomeAluno);
+
+	escreva ("Entre com a nota do aluno: ");
+	leia(nota);
+
+	se (nota >= 7) 
+	então { 
+		contAluno = contAluno+1; 
+		}
+	
+	se (nota > maiorNota) 
+	então {
+		 maiorNota = nota;
+		}
+	
+	guardaNotaD = maiorNota;
+
+fimSe
+fimSe
+
+
+FIM-ESCOLHA
+
+ATE valorDigitado = 'N';
+
+
+	escreva("A quantidade de alunos aprovados foi: ", contAluno);
+ 
+	se (guardaNotaA > guardaNotaB) e (guardaNotaA > guardaNotaC) e (guardaNotaA > guardaNotaD) entao
+		escreva("A Maior nota foi: ", guardaNotaA, " da turma A");
+
+	se (guardaNotaB > guardaNotaC) e (guardaNotaC > guardaNotaD) entao
+		escreva("A Maior nota foi: ", guardaNotaB, " da turma B");
+
+	se (guardaNotaC > D) entao
+		escreva("A Maior nota foi: ", guardaNotaC, " da turma C");
+
+	senao 
+		escreva("A Maior nota foi: ", guardaNotaD, " da turma D");
+
+fimAlgoritmo
+	

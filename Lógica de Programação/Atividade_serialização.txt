@@ -1,0 +1,40 @@
+Referência bibliográfica: https://www.macoratti.net/13/12/c_seri1.htm
+
+
+
+
+using System;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+
+namespace SerializacaoCSharp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //serialização C#
+            string dados = "Este texto deve ser armazenado em um arquivo.";
+
+            // cria um arquivo para salvar os dados
+            FileStream fs = new FileStream("CaioFelipeSerializacao.Data", FileMode.Create);
+
+            // Cria um objeto BinaryFormatter para realizar a serialização
+            BinaryFormatter bf = new BinaryFormatter();
+
+            // Usa o objeto BinaryFormatter para serializar os dados para o arquivo
+            bf.Serialize(fs, dados);
+
+            // Fecha o arquivo
+            fs.Close();
+
+            //Aguarda o pressionamento de uma tecla para encerrar
+            Console.WriteLine("Arquivo serializado !");
+            Console.ReadKey();
+        }
+    }
+}
+
+
+Ao executar o aplicativo será gerado o arquivo CaioFelipeSerializacao.Data na pasta bin/Debug.
+Ao abrir este arquivo em um bloco de notas você verá o conteúdo da string armazenada cercada por informações binárias

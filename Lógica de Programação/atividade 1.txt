@@ -1,0 +1,22 @@
+Atividade 1 - Lógica de Programação: 
+
+Aristóteles, Sócrates e Platão estavam disputando uma competição de perguntas nas disciplinas de Física, Matemática e Química. Cada um obteve um primeiro lugar, um segundo lugar e um terceiro lugar.
+
+Sabendo que: 
+- Aristóteles("A") não ficou em primeiro em Química; 
+- Sócrates perdeu("S") para Platão em Física; 
+- Platão("P") acertou mais que Aristóteles em Matemática.
+
+Informe quem ficou em 1º, 2º e 3º lugar em cada disciplina.
+
+A 	1- f	
+	2- q
+	3- m
+
+S 	1- q	
+	2- m
+	3- f
+
+P 	1- m
+	2- f 
+	3- q

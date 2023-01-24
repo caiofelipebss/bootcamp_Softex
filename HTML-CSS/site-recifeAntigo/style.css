@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(rgba(29,29,29,0.7),rgba(29,29,29,0.8)),url(https://visit.recife.br/wp-content/uploads/2017/10/o-que-fazer-marco-zero-03.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.contents {
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    background-color: rgba(29,29,29,0.5);
+    position: fixed;
+}
+
+.contents .list-menu {
+    color: wheat;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contents .list-menu li a {
+    padding: 3rem 1rem 2rem 1rem;
+    color: wheat;
+    font-size: 1.8 rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 200ms ease-in;
+}
+
+.contents .list-menu li a:hover {
+    background-color: #3333;
+    border-bottom: 4px solid wheat;
+    color:yellowgreen;
+}
+
+
+/* PONTOS TURISTICOS */
+
+.pontos-turisticos {
+    
+    padding-bottom: 3rem;
+    color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.pontos-turisticos img {
+    width: 400px;
+    height: 400px;
+    margin-top: 10rem;
+    margin-left: 10rem;
+    border: 2px solid white;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+
+/* MARCO ZERO */
+
+.artigo-marco-zero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+.artigoMarcoZero {
+    display: flex;
+    justify-content: space-between;    
+}
+
+.artigo-marco-zero p {
+    text-align: justify;
+    font-size: 1.6rem;
+    width: 600px;
+}
+
+
+/* CAIS DO SERTAO */
+
+.artigo-cais-sertao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+.artigoCaisSertao {
+    display: flex;
+    justify-content: space-between;
+}
+
+.artigo-cais-sertao p {
+    text-align: justify;
+    font-size: 1.6rem;
+    width: 600px;
+}
+
+/* RUA DO BOM JESUS */
+
+.artigo-rua-bomJesus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.artigoBomJesus {
+    display: flex;
+    justify-content: space-between;
+}
+
+.artigo-rua-bomJesus p {
+    text-align: justify;
+    font-size: 1.6rem;
+    width: 600px;
+}
+
+/* PAÇO DO FREVO */
+
+
+.artigo-paco-frevo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+.artigoPacoFrevo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.artigo-paco-frevo p {
+    text-align: justify;
+    font-size: 1.6rem;
+    width: 600px;
+}
+
+/* TEATRO SANTA ISABEL  */
+
+
+.artigo-teatro-santa-Isabel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.artigoTeatroSantaIsabel{
+    display: flex;
+    justify-content: space-between;
+}
+
+.artigo-teatro-santa-Isabel p {
+    text-align: justify;
+    font-size: 1.6rem;
+    width: 600px;
+}
+
+
+footer {
+    height: 25px;
+    background-color:  rgba(29,29,29,0.9);
+    color: wheat;
+}
+
+.caiologo img{
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 10px;
+}
+
+.caiologo a {
+    text-transform: uppercase; 
+}

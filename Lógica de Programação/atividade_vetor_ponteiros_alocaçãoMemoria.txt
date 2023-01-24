@@ -1,0 +1,113 @@
+Crie um vetor com ponteiros utilizando alocação dinâmica na linguagem C, que:
+
+- use a função realloc;
+- use a função sizeof;
+- que tenha tamanho 22 de vetor;
+- depois libere o bloco utilizando a função free.
+
+
+	Resposta: 
+
+ Definimos um vetor em C da seguinte forma: 
+
+	int v[22];
+
+ Esta declaração diz que o 'v' é um vetor de inteiros dimensionado com 22 elementos (ou de tamanho 22). 
+Isto é, reservamos um espaço de memória contínuo para armazenar 22 valores inteiros. 
+
+ O acesso a cada elemento é feito através de uma indexação da variável v. Em C, a indexação de um vetor varia de ZERO a 
+n-1, onde n representa a dimensão do vetor. 
+
+ex:		v[0] acessa o primeiro elemento de v
+		v[1] o segundo elemento de v..
+
+obs: Mas v[22] invade a memória! (incorreto, lembre-se que começa em zero!).
+
+
+-- Código que aloca espaço para 22 inteiros: --
+
+	
+	int *p;
+	p = malloc(22*sizeof(int));
+
+
+obs: O operador sizeof() retorna um número de bytes de um inteiro. 
+
+
+ Função básica para alocar memória é malloc. 
+
+	int *p;
+	p = malloc(22*4);
+
+ Após esses comandos, se a alocação for bem sucedida, 'p' armazenará o endereço inicial de uma área contínua de memória suficiente para armazenar 22 valores inteiros.
+Desta forma, consideramos que um inteiro ocupa 4 bytes. Para ficarmos independentes de compiladores e máquinas, usamos o operador sizeof( ).
+
+	p = malloc(22*sizeof(int));
+
+ A função malloc é usada para alocar espaço para armazenarmos valores de qualquer tipo. Por este motivo,
+malloc retorna um ponteiro genérico, para um tipo qualquer, representado por void* , que pode ser convertido
+automaticamente pela linguagem para o tipo apropriado na atribuição.
+
+ No entanto, é comum fazermos a conversão explicitamente, utilizando o operador de molde de tipo (cast). Então:
+
+
+	p = (int *) malloc(22*sizeof(int));
+
+
+ Se não houver espaço livre suficiente para realizar a alocação, a função retorna um endereço nulo (representado pelo símbolo NULL , definido em stdlib.h).
+Podemos tratar o erro na alocação do programa verificando o valor de retorno da função malloc.
+
+Ex: imprimindo mensagem e abortando o programa com a função exit, também definida na stdlib.
+
+...
+	int * p;
+	p = (int*) malloc(22*sizeof(int));
+	 if (p==NULL) {
+		printf("Memoria insuficiente.\n");
+		 exit(1);
+	
+	/* aborta o programa e retorna 1 para o sistema operacional */
+}...
+
+
+Resumindo: 
+
+
+		int *p = (int *) malloc (sizeof(int));
+		/* aloca espaço para um inteiro */
+
+
+		int *ai = (int *) calloc (n, sizeof(int));
+		/* aloca espaço para um array de n inteiros */
+
+
+
+ toda memória não mais utilizada deve ser liberada através da função free():
+
+	free(p); /* libera o inteiro alocado */
+
+	free(ai); /* libera todo o array */
+
+	free(): void free(void *p);  /* libera todo o espaço alocado */
+	
+
+
+ Agora vamos parar de enrolar e responder a questão do curso. (Estou fazendo direto no bloco de notas, por isso não está com as bibliotecas etc). :P
+
+	
+		int * p;
+		p = (int*) malloc(10*sizeof(int));     		/* aqui coloquei 10 para poder usar a função REALLOC (que altera a quantidade de posições de memória alocadas através das funcções malloc e calloc) */
+		p = (int*) realloc(p, 22 * sizeof(int));  	/* aqui a variável p recebe o endereço de memória do novo vetor agora com 22 elementos. */
+		free(): void free(void *p);       		      /* aqui liberei todo o espaço alocado. Mas acho que se e eu usasse apenas o "free(p);" daria certo também. */
+
+
+
+
+
+
+Referências: 
+
+	
+	Alocação Dinâmica em C. Profa. Rosana Braga. Instituto de Ciências Matemáticas e de Computação. Universidade de São Paulo - São Carlos. 2010. Disponível em (acesso em 20/06/2022): http://wiki.icmc.usp.br/images/5/59/Aula14-AlocacaoDinamica.pdf 
+	Slide da aula; 
+	

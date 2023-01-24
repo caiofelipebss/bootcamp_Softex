@@ -1,0 +1,71 @@
+Atividade 4 - 
+
+Elabore um algoritmo que representa um cadastro. Ele deve ler os seguintes dados fornecidos pelo usuário:
+
+- Nome
+- Endereço
+- Cidade
+- CPF
+- RG
+- Idade
+- Nome do pai
+- Nome da mãe
+- Peso
+- Renda bruta
+
+Apresente as informações solicitadas no final do cadastro.
+
+Resposta:
+
+inicio
+
+ caracter <- nome, endereco, cidade, nomePai, nomeMae;
+ inteiro <- cpf, rg, idade;
+ real <- peso, rendaBruta;
+
+ Escreval("Informe os dados a seguir: ");   //O "escreva" com L no final faz com que pule de linha. 
+ Escreval("Nome:");
+ Leia(nome);
+
+ Escreval("Endereço: ");
+ Leia(endereco);
+
+ Escreval("Cidade: ");
+ Leia(cidade);
+
+ Escreval("CPF (apenas números):");
+ Leia(cpf);
+
+ Escreval("RG (apenas números):");
+ Leia(rg);
+
+ Escreval("Idade: ");
+ Leia(idade);
+
+ Escreval("Nome do Pai: ");
+ Leia(nomePai);
+
+ Escreval("Nome da Mãe: ");
+ Leia(nomeMae);
+
+ Escreval("Peso: ");
+ Leia(peso);
+
+ Escreval("Renda Bruta: ");
+ Leia(rendaBruta);
+
+ Escreval($"Meu nome é {nome}, moro em {endereco}, na cidade de {cidade}. Meu CPF é {cpf}, meu RG é {rg}. Meus pais são {nomePai} e {nomeMae}. Atualmente estou pesando {peso} kg e minha renda bruta é {rendaBruta}");
+
+
+fimAlgoritmo 
+
+
+OBS1: O padrão utilizado para as variáveis com nome composto, é o camelCase. É uma convenção de nomeclatura usada para deixar o código mais legível para outros desenvolvedores.
+
+"Camel case é a prática de escrever frases sem espaços ou pontuação. Indica a separação de palavras com uma única letra maiúscula, e a primeira palavra começando com maiúsculas e minúsculas. Exemplos comuns incluem "iPhone" e "eBay"".
+
+
+OBS2: No escreva que mostra todas as informações, foi utilizado o operador $, ele é utilizado em algumas linguagens de programação(C# por exemplo) para concatenação. Assim, não é necessário escrever da seguinte forma: "Nome " + nome + " CPF " + cpf... 
+
+OBS3: O "escreva" com L no final faz com que pule de linha. 
+
